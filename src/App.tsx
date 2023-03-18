@@ -1,31 +1,9 @@
-import { NavLink } from 'react-router-dom'
+import AppRouter from '@/router'
 
-function App(props) {
+const App = () => {
   return (
-    <div>
-      <NavLink
-        to="/Home/ShoppingCart"
-        activeStyle={{
-          fontWeight: 'bold',
-          color: 'red'
-        }}
-        replace
-      >
-        跳转到 ShppingCart
-      </NavLink>
-      <br />
-      <NavLink
-        to="/Home/Classify"
-        activeStyle={{
-          fontWeight: 'bold',
-          color: 'red'
-        }}
-        replace
-      >
-        跳转到 Classify
-      </NavLink>
-      <br /> <br />
-      {props.children}
+    <div className="app-container">
+      <AppRouter />
     </div>
   )
 }
